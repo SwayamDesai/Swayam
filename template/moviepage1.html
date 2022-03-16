@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moviepage</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/mp1.css') }}">
+     <!-- <link rel="stylesheet" href=" {{ url_for('static',filename='images/mp1.css') }}"> -->
+     <script src="https://kit.fontawesome.com/237f4ae59e.js" crossorigin="anonymous"></script>
+</head>
+<!-- <style></style> -->
+<body>
+    <div class="container">
+        <div class="cellphone-container">    
+            <div class="movie">       
+              <!-- <div class="menu"><i class="material-icons"><i class="fas fa-line"></div> -->
+              <div class="movie-img"></div>
+              <div class="text-movie-cont">
+                <div class="mr-grid">
+                  <div class="col1">
+                    <h1>{{record['Title']}}</h1> <!--name-->
+                    <ul class="movie-gen">
+                      <li>{{record['Content_id']}} /</li> <!--contectid-->
+                      <li>{{record['Year']}} /</li> <!--year-->
+                      <!-- <li>2h 49min  /</li> duration -->
+                      <li>{{record['Genre']}}</li> <!--genre-->
+                    </ul>
+                  </div>
+                </div>
+                <div class="mr-grid summary-row">
+                  <div class="col2">
+                    <h5>Cast</h5>
+                  </div>
+                  <div class="col2">
+                     <ul class="movie-likes">
+                      <li><i class="material-icons"><i class="fas fa-star"></i>{{record['Rating']}}</li> <!--rating-->
+                      <!-- <li><i class="material-icons"><i class="fas fa-thumbs-down"></i></i>3</li> -->
+                    </ul>
+                  </div>
+                </div>
+                <div class="mr-grid actors-row">
+                  <div class="col1">
+                    <p class="movie-actors">{{record['Cast']}}</p> <!--cast-->
+                  </div>
+                </div>
+                <div class="mr-grid action-row">
+                  <div class="col2"><div class="watch-btn"><h3><i class="material-icons"><i class="fas fa-play"></i>Stream</h3></div>
+                  </div>
+                  <div class="col6 action-btn"><i class="material-icons"><i class="fas fa-download"></i></i>
+                  </div>
+                  <div class="col6 action-btn"><i class="material-icons"><i class="fas fa-heart"></i></i>
+                  </div>
+                  <div class="col6 action-btn"><i class="material-icons"><i class="fas fa-share"></i></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+</body>
+</html>

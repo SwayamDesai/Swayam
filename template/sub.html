@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Subscription</title>
+    <!-- <link rel="stylesheet" href="finalsubsstyle.css"> -->
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/finalsubsstyle.css') }}">
+</head>
+<!-- <style>
+    @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+body{
+    background-image: url(bgtsp.jpg);
+  /* background: #5D3F6A; */
+  font-family: 'Source Sans Pro', sans-serif;
+}
+@font-face {
+    
+    src: url('../code/DigitaltsOrange-nRAPg.ttf');
+    font-family: cevi;
+    
+}
+#title{
+  text-align: center;
+  color:white;
+  font-size:30px;
+  /* text-transform: uppercase; */
+  /* margin-top: 50px; */
+  font-family: cevi;
+}
+.hover-table-layout {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+   -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  max-width:800px;
+  margin:0 auto;
+}
+.listing-item {
+   display: block;
+   width:100%;
+  margin-bottom:20px;
+    float: left;
+    background: #fff;
+    border-radius:10px;
+    z-index:0;
+  cursor:pointer;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+      -webkit-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.10);
+    -moz-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.10);
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.10);
+
+}
+.listing-item:hover,  .listing-item.active{
+  -webkit-transform: scale(1.03);
+  -moz-transform: scale(1.03);
+    transform: scale(1.03);
+    -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+    transition: all 0.3s;
+  z-index:2;
+
+}
+.listing-item .listing{
+    padding:20px;
+    position:relative;  
+}
+.listing-item .listing:before{
+    content:"";
+  position:absolute;
+  top:-15px;
+  left:-o-calc(50% - 15px);
+  left:-moz-calc(50% - 15px);
+  left:-webkit-calc(50% - 15px);
+  left:calc(50% - 15px);
+  border-bottom:20px solid #fff;
+  border-left:20px solid transparent;
+  border-right:20px solid transparent;
+}
+  figure.image img {
+    width:100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+figure.image {
+    position: relative;
+  margin: 0;
+    padding: 0;
+}
+figure.image figcaption {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    bottom: 4px;
+  /* background: rgba(0,0,0,0.6); */
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+}
+figcaption .caption{
+  position:relative;
+  top:50%;
+  -moz-transform:translateY(-50%);
+  -webkit-transform:translateY(-50%);
+  transform:translateY(-50%);
+
+}
+figcaption h1{
+    color:rgb(17, 16, 16);
+  font-weight:bold;
+    font-size:20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bolder;
+    font-style: italic;
+  /* text-transform: uppercase; */
+}
+figcaption p{
+  color:rgb(14, 8, 8);
+  font-size:16px;
+  font-weight: bolder;
+}
+.listing h4 {
+   
+    font-size: 13px;
+    text-align: center;
+    padding: 5px 10px;
+    font-weight: bold;
+}
+.listing h4:not(:last-child){
+   border-bottom: 1px solid #ccc;
+}
+.listing-item:hover figure.image figcaption{
+       background: rgba(81, 223, 233, 0.6);
+}
+@media only screen and (min-width:540px){
+  .listing-item {
+   display: block;
+   width: -webkit-calc(100%/3);
+   width: -moz-calc(100%/3);
+    width: calc(100%/3);
+  }
+}
+@media only screen and (min-width:1024px){
+  .hover-table-layout{
+        padding: 30px;
+  }
+}
+</style> -->
+<body>
+
+    <h2 id="title">Welcome to The Streaming Platform <br>Please Choose a plan to continue </h2> 
+             
+    <div class="hover-table-layout">
+        <div class="listing-item" onclick="redirect()" >
+            <figure class="image">
+                <img src="silver.png" alt="image">
+                <figcaption>
+                  <div class="caption">
+                    <h1>Silver Plan</h1>
+                    <p>Rs.399/Month</p>
+                    </div>
+                </figcaption>
+            </figure>
+         
+            <div class="listing">
+                <h4>Number of screens you can watch at the same time - 1</h4>
+                <h4>Number of phones or tablets you can have downloads on 1</h4>
+                <h4>Video Quality available - 720p</h4>
+                <h4>Available download storage for up to 5 GB</h4>
+                
+            </div>
+        </div>
+        <div class="listing-item" onclick="redirect()">
+            <figure class="image">
+                <img src="gold.png" alt="image">
+                <figcaption>
+                   <div class="caption">
+                    <h1>Gold plan</h1>
+                    <p>Rs.599/Month</p>
+                    </div>
+                </figcaption>
+            </figure>
+            <div class="listing">
+                <h4>Number of screens you can watch at the same time - 2</h4>
+                <h4>Number of phones or tablets you can have downloads on 2</h4>
+                <h4>Video Quality available - 720p/1080p/HD</h4>
+                <h4>Available download storage for up to 10 GB</h4>
+                <!-- <h4>perkss</h4> -->
+                
+            </div>
+        </div>
+        <div class="listing-item" onclick="redirect()">
+            <figure class="image">
+                <img src="plat.png" alt="image">
+                <figcaption>
+                   <div class="caption">
+                    <h1>Platinum Plan</h1>
+                    <p>Rs.799/Month</p>
+                    </div>
+                </figcaption>
+            </figure>
+            <div class="listing">
+                <h4>Number of screens you can watch at the same time - 4</h4>
+                <h4>Number of phones or tablets you can have downloads on 4</h4>
+                <h4>Video Quality available - 720p/1080p/HD/UHD</h4>
+                <h4>Available download storage for up to 20 GB</h4>
+                <!-- <h4></h4> -->
+            </div>
+        </div>
+    </div>
+<script>
+    function redirect()
+    {
+        document.location.href="payment.html";
+    }
+</script>
+</body>
+</html>
